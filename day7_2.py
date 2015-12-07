@@ -14,10 +14,6 @@ def compute(destination):
             command = requirements["command"]
             wire1 = requirements["wire1"]
             wire2 = requirements["wire2"]
-            if wire1 == destination:
-                wire1 = 0xffff
-            if wire2 == destination:
-                wire2 = 0xffff
             if command == "NOT":
                 res = ~ compute(wire1) & 0xffff
             if command == "RSHIFT":
